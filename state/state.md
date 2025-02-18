@@ -36,3 +36,32 @@ dispatch({ type: "increment" }); -->
 
 # 10. How do I share state between components?
 # 1 Passing state as props
+# 2. for global state managment :mcontent api :value={{count,setcount}}
+
+
+
+# How can I persist state across page reloads?
+# a. localStorage, session storgae ith useState and useEffet
+# b.  useReducer with useEffect
+
+
+
+# What is the difference between local state and global state?
+# Local State: Managed by useState inside a component, used for UI updates (e.g., form input, modals).
+# Global State: Managed by Context, Redux, Zustand, etc., used when multiple components need access to the same state.
+
+
+
+
+# How can I debounce state updates in React?
+# Use useEffect with setTimeout for debouncing:
+<!-- const [searchTerm, setSearchTerm] = useState("");
+const [debouncedSearch, setDebouncedSearch] = useState("");
+
+useEffect(() => {
+  const handler = setTimeout(() => {
+    setDebouncedSearch(searchTerm);
+  }, 500); // Delay of 500ms
+
+  return () => clearTimeout(handler); // Cleanup on re-render
+}, [searchTerm]); -->
